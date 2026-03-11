@@ -1,19 +1,18 @@
 public class PractiseNine {
     public static void main(String[] args) {
-        printYearsAndDays(561600);
+        printYearsAndDays(525600);
     }
     public static void printYearsAndDays(long minutes) {
         if (minutes < 0) {
             System.out.println("Invalid Value");
         } else {
             long hours = minutes / 60;
-            System.out.println(hours);
+            System.out.println("hours " + hours);
             long days = hours / 24;
-            System.out.println(days);
+            System.out.println("days " + days);
             long years = days / 365;
-            long remainingDays = days % years;
-            System.out.println(remainingDays);
-            System.out.println(years);
+            long remainingDays = days - (years * 365);
+            System.out.println("years " +  years);
             System.out.println(minutes + " min = " + years + " y and " + remainingDays + " d.");
         }
 
